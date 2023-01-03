@@ -4,8 +4,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     const optionsArr = Object.keys(options);
    
     return (
-        <div>
-            <p className={css.title}>Please leave feedback</p>
+        <div className={css.box}>
             {optionsArr.map(option => (
                 <button
                     key={option}

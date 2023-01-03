@@ -2,10 +2,6 @@
     display: flex;
     font-size: 20px;
     margin: 5px;
+    font-weight: initial;
 }
 
-p:first-child {
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 15px;
-}
