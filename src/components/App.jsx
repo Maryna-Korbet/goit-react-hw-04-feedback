@@ -1,5 +1,6 @@
 import { Component } from "react"
 import FeedbackControls from "./FeedbackControls/FeedbackControls";
+import Statistics from "./Statistics/Statistics";
 
 export class App extends Component {
   state = {
@@ -8,10 +9,32 @@ export class App extends Component {
     bad: 0
   }
 
+  countTotalFeedback = () => {
+    this.setState(prevState => ({
+      value: prevState.value + 1,
+    }));
+  };
+
+  countPositiveFeedbackPercentage = () => {
+    const total = this.countTotalFeedback;
+    Math.round((this.state.good / total) * 100);
+  };
+
   render() {
+    const { good, neutral, bad, countTotalFeedback, countPositiveFeedbackPercentage } = this.state;
+
     return (
       <>
         <FeedbackControls />
+
+        <Statistics
+          good={good}
+          neutral={neutral}
+          bad={bad}
+          total={countTotalFeedback}
+          positivePercentage={countPositiveFeedbackPercentage}
+        />
+
       </>
     );
   }
