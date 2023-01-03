@@ -1,4 +1,5 @@
 import css from 'components/FeedbackOptions/FeedbackOptions.module.css';
+import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     const optionsArr = Object.keys(options);
@@ -18,6 +19,11 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
             ))}
     </div>
     );
+};
+
+FeedbackOptions.propTypes = {
+    options: PropTypes.objectOf(PropTypes.number.isRequired),
+    onLeaveFeedback: PropTypes.func.isRequired,
 };
 
 export default FeedbackOptions;
