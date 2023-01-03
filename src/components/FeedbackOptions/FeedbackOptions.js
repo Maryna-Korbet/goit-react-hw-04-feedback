@@ -1,6 +1,6 @@
-import css from 'components/FeedbackControls/FeedbackControls.module.css';
+import css from 'components/FeedbackOptions/FeedbackOptions.module.css';
 
-const FeedbackControls = () => (
+const FeedbackOptions = () => (
     <>
         <p className={css.title}>Please leave feedback</p>
         <button type="button" className={css.button}>Good</button>
@@ -9,4 +9,4 @@ const FeedbackControls = () => (
     </>
 )
 
-export default FeedbackControls;
+export default FeedbackOptions;

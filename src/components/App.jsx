@@ -1,5 +1,5 @@
 import { Component } from "react"
-import FeedbackControls from "./FeedbackControls/FeedbackControls";
+import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
 import Statistics from "./Statistics/Statistics";
 
 export class App extends Component {
@@ -25,7 +25,7 @@ export class App extends Component {
 
     return (
       <>
-        <FeedbackControls />
+        <FeedbackOptions />
 
         <Statistics
           good={good}
